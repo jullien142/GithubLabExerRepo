@@ -1,0 +1,20 @@
+@startuml UseCaseDiagram
+left to right direction
+skinparam packageStyle rectangle
+
+actor AccountHolder as AH
+
+package "Savings Account System" {
+  usecase "View Account Details" as UC1
+  usecase "Check Balance"        as UC2
+  usecase "Deposit Funds"        as UC3
+  usecase "Withdraw Funds"       as UC4
+  usecase "Compute Interest"     as UC5
+}
+
+AH --> UC1
+AH --> UC2
+AH --> UC3
+AH --> UC4
+AH --> UC5
+@enduml

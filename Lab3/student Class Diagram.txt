@@ -1,0 +1,13 @@
+@startuml
+class Student {
+    - name: String
+    - scores: List<Integer>
+    + Student(name: String, number: int)
+    + getName(): String
+    + setScore(i: int, score: int): void
+    + getScore(i: int): int
+    + getAverage(): float
+    + getHighScore(): int
+    + toString(): String
+}
+@enduml
