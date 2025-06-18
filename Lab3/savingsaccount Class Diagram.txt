@@ -1,0 +1,20 @@
+@startuml ClassDiagram
+skinparam classAttributeIconSize 0
+
+class SavingsAccount {
+  - name: String
+  - pin: String
+  - balance: double
+  + RATE: double = 0.02
+  --
+  + __init__(name: String, pin: String, balance: double = 0.0)
+  + __str__(): String
+  + getName(): String
+  + getPin(): String
+  + getBalance(): double
+  + deposit(amount: double): String?
+  + withdraw(amount: double): String?
+  + computeInterest(): double
+}
+
+@enduml

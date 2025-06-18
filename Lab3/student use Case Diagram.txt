@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor Teacher
+actor Student
+
+Teacher --> (Create Student)
+Teacher --> (Set Test Scores)
+Teacher --> (View Student Report)
+Student  --> (View Own Scores)
+@enduml
