@@ -1,0 +1,6 @@
+ADVENTURE_CLASS (
+  Class_ID PK,
+  Description,
+  Max_Size,
+  Fee
+)

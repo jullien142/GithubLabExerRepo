@@ -1,0 +1,6 @@
+ENROLLMENT (
+  Participant_ID FK,
+  Class_ID FK,
+  Class_Date,
+  PK (Participant_ID, Class_ID, Class_Date)
+)

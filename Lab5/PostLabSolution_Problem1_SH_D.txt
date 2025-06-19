@@ -1,0 +1,25 @@
+ADVENTURE_CLASS (
+  Class_ID PK,
+  Description,
+  Max_Size,
+  Fee
+)
+
+CLASS_INSTANCE (
+  Class_ID FK,
+  Class_Date,
+  Guide_ID FK NULLABLE,
+  PK (Class_ID, Class_Date)
+)
+
+GUIDE (
+  Guide_ID PK,
+  Last_Name,
+  First_Name,
+  Address,
+  City,
+  State,
+  Postal_Code,
+  Phone,
+  Hire_Date
+)

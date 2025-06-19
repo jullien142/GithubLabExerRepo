@@ -1,0 +1,18 @@
+erDiagram
+  PARTICIPANT ||--o{ ENROLLMENT : enrolls
+  ADVENTURE_CLASS ||--o{ ENROLLMENT : includes
+
+  PARTICIPANT {
+    string Participant_ID PK
+  }
+
+  ADVENTURE_CLASS {
+    string Class_ID PK
+  }
+
+  ENROLLMENT {
+    string Participant_ID FK
+    string Class_ID FK
+    date Class_Date
+    PK (Participant_ID, Class_ID, Class_Date)
+  }
