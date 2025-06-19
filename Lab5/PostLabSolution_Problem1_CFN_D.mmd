@@ -1,0 +1,42 @@
+erDiagram
+  GUIDE ||--o{ CLASS_INSTANCE : teaches
+  ADVENTURE_CLASS ||--o{ CLASS_INSTANCE : offers
+  CLASS_INSTANCE ||--o{ ENROLLMENT : attended_by
+  PARTICIPANT ||--o{ ENROLLMENT : enrolled_in
+
+  GUIDE {
+    string Guide_ID PK
+    string Last_Name
+    string First_Name
+    string Address
+    string City
+    string State
+    string Postal_Code
+    string Phone
+    date Hire_Date
+  }
+
+  ADVENTURE_CLASS {
+    string Class_ID PK
+    string Description
+    int Max_Size
+    decimal Fee
+  }
+
+  CLASS_INSTANCE {
+    string Class_ID FK
+    date Class_Date
+    string Guide_ID FK
+    PK (Class_ID, Class_Date)
+  }
+
+  PARTICIPANT {
+    string Participant_ID PK
+  }
+
+  ENROLLMENT {
+    string Participant_ID FK
+    string Class_ID FK
+    date Class_Date
+    PK (Participant_ID, Class_ID, Class_Date)
+  }

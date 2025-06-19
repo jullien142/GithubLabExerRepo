@@ -1,0 +1,11 @@
+PARTICIPANT (
+  Participant_ID PK,
+  Last_Name,
+  First_Name,
+  Address,
+  City,
+  State,
+  Postal_Code,
+  Telephone,
+  Date_Of_Birth
+)
